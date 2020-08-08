@@ -1,28 +1,63 @@
 defmodule Smuggle.MixProject do
   use Mix.Project
 
+  @version "1.0.0"
+
   def project do
     [
       app: :smuggle,
-      version: "0.1.0",
-      elixir: "~> 1.10",
+      deps: deps(),
+      description: "Pack data for easy pasting into another interactive shell",
+      docs: docs(),
+      elixir: "~> 1.8",
+      homepage_url: "https://github.com/amplifiedai/smuggle",
+      name: "Smuggle",
+      package: package(),
+      preferred_cli_env: [coveralls: :test, "coveralls.html": :test, "coveralls.json": :test],
+      source_url: "https://github.com/amplifiedai/smuggle",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      test_coverage: [tool: ExCoveralls],
+      version: @version
     ]
   end
 
-  # Run "mix help compile.app" to learn about applications.
   def application do
     [
       extra_applications: [:logger]
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:credo, "~> 1.4.0", only: [:dev, :test], runtime: false},
+      {:decorator, "~> 1.3.2"},
+      {:dialyxir, "~> 1.0.0", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.21.0", only: :dev, runtime: false},
+      {:excoveralls, "~> 0.13.0", only: :test, runtime: false},
+      {:mix_test_watch, "~> 1.0.2", only: :dev, runtime: false},
+      {:stream_data, "~> 0.5.0", only: [:dev, :test]}
+    ]
+  end
+
+  defp docs do
+    [
+      api_reference: false,
+      authors: ["Garth Kidd"],
+      canonical: "http://hexdocs.pm/smuggle",
+      main: "TelemetryDecorator",
+      source_ref: "v#{@version}"
+    ]
+  end
+
+  defp package do
+    [
+      files: ~w(mix.exs README.md lib),
+      licenses: ["Apache 2.0"],
+      links: %{
+        "Amplified" => "https://www.amplified.ai",
+        "GitHub" => "https://github.com/amplifiedai/smuggle"
+      },
+      maintainers: ["Garth Kidd"]
     ]
   end
 end
