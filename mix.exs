@@ -7,7 +7,7 @@ defmodule Smuggle.MixProject do
     [
       app: :smuggle,
       deps: deps(),
-      description: "Pack data for easy pasting into another interactive shell",
+      description: "Pack Elixir data into self-extracting archives to paste elsewhere",
       docs: docs(),
       elixir: "~> 1.8",
       homepage_url: "https://github.com/amplifiedai/smuggle",
@@ -44,7 +44,7 @@ defmodule Smuggle.MixProject do
       api_reference: false,
       authors: ["Garth Kidd"],
       canonical: "http://hexdocs.pm/smuggle",
-      main: "TelemetryDecorator",
+      main: "Smuggle",
       source_ref: "v#{@version}"
     ]
   end
