@@ -89,11 +89,11 @@ Smuggle.dump(value, wrapper: :gfm)
 
 On GitHub, the self-extracting archive will be hidden behind a friendly summary so it's easy to skip:
 
-<img src="https://user-images.githubusercontent.com/15906/89889168-90803780-dc14-11ea-928e-a89a9eb1f62e.png" alt="gfm-closed" style="max-width:100%; padding-left: 4rem;">
+> ![gfm-closed](https://user-images.githubusercontent.com/15906/89889168-90803780-dc14-11ea-928e-a89a9eb1f62e.png)
 
 That friendly open source maintainer who'll check it out, though, can click once to see the whole thing:
 
-<img src="https://user-images.githubusercontent.com/15906/89889172-91b16480-dc14-11ea-886a-3c53b53f148e.png" alt="gfm-open" style="max-width:100%; padding-left: 2rem;">
+> ![gfm-open](https://user-images.githubusercontent.com/15906/89889172-91b16480-dc14-11ea-886a-3c53b53f148e.png)
 
 <!-- MDOC -->
 ## Installation
