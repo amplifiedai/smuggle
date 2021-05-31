@@ -31,7 +31,7 @@ defmodule Smuggle.MixProject do
     [
       {:credo, "~> 1.5.5", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.1.0", only: :dev, runtime: false},
-      {:ex_doc, "~> 0.23.0", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.24.0", only: :dev, runtime: false},
       {:excoveralls, "~> 0.14.0", only: :test, runtime: false},
       {:mix_test_watch, "~> 1.0.2", only: :dev, runtime: false},
       {:stream_data, "~> 0.5.0", only: [:dev, :test]}
